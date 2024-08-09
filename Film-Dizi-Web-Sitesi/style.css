@@ -1,0 +1,147 @@
+/* Genel Stil */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding-left: 20px; /* Soldan 20px boşluk */
+    padding-right: 20px;
+}
+.background-image {
+    margin-top: 30px;
+    height: 700px; /* Arka plan resminin yüksekliğini ayarlayın */
+    background-image: url('images/Film and Theater Presentation.png'); /* Arka plan resmi dosya yolunu belirtin */
+    background-repeat: no-repeat; /* Resmin yinelenmemesini sağlayın */
+    background-size: cover; /* Resmin ekran boyutuna otomatik olarak uyum sağlamasını sağlayın */
+    border-radius: 2px;
+}
+/* Menü Stili */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+section{
+    padding: 3.5rem 7%;
+}
+.logo img {
+    height: 70px;
+    border-radius: 40px;
+    
+}
+
+.film-listesi, .dizi-listesi {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.film, .dizi {
+    width: 200px;
+    margin-bottom: 20px;
+    padding: 50px;
+    background-color: #333;
+    text-align: center;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.film img, .dizi img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.incele-button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.incele-button:hover {
+    background-color: #ff3300;
+}
+.yorum-listesi {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px; /* Yorumlar ile film/dizi listesi arasındaki boşluk */
+}
+
+.yorum {
+    width: calc(33.33% - 20px); /* Sayfada 3 yorumun yan yana sığması için */
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Padding ve border alanını genişliğe dahil etmek için */
+}
+
+.yorum-bilgileri {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.yorum-bilgileri img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.yorum-yapan {
+    font-weight: bold;
+}
+
+.yorum-icerigi p {
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+/* Yorumlar sayısına göre sıralama */
+@media screen and (max-width: 767px) {
+    .yorum {
+        width: calc(50% - 20px); /* Sayfada 2 yorumun yan yana sığması için */
+    }
+}
+@media screen and (max-width: 480px) {
+    .yorum {
+        width: 100%; /* Sayfada 1 yorumun sığması için */
+    }
+}
+
+
+footer {
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
